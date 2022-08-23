@@ -1,0 +1,11 @@
+public class CallBack implements MqttCallback {
+  public void messageArrived(MqttTopic topic, MqttMessage message) {
+    try {
+      System.out.println("Message arrived: \"" + message.toString()
+          + "\" on topic \"" + topic.toString() + "\"");
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+// ... Other callback methods 
+}
